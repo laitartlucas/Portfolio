@@ -1,0 +1,473 @@
+/* ESTILO GERAL */
+:root {
+    --bg-primary: #000000;
+    --bg-secondary: #242424;
+    --text-primary: #ffffff;
+    --text-secondary: #304f79;
+    --accent-color: #e0882f;
+    --accent-hover: #fd7f00;
+    --primary-blue: #0461bb;
+    --white-light: #ffffff75;
+}
+
+body.light-theme {
+    --bg-primary: #f5f5f5;
+    --bg-secondary: #ffffff;
+    --text-primary: #1a1a1a;
+    --text-secondary: #304f79;
+    --accent-color: #e0882f;
+    --accent-hover: #fd7f00;
+    --primary-blue: #0461bb;
+    --white-light: #00000020;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto Flex", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
+
+body{
+    background-color: var(--bg-primary);
+    height: 100vh;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.interface{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.flex{
+    display: flex;
+}
+
+.btn-contato button{
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 700;
+    background-color: var(--accent-color);
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .2s;
+    color: #000;
+}
+
+h2.titulo{
+    color: var(--text-primary);
+    font-size: 34px;
+    text-align: center;
+}
+
+h2.titulo span{
+    color: var(--accent-color);
+}
+
+button:hover{
+    box-shadow: 0px 0px 8px var(--accent-hover);
+    transform: scale(1.05);
+}
+
+/* ESTILO DO CABEÇALHO */
+header{
+    padding: 40px 4%;
+    border-bottom: 2px solid var(--white-light);
+    transition: border-color 0.3s ease;
+}
+
+header > .interface{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header a{
+    color: var(--text-secondary);
+    text-decoration: none;
+    display: inline-block;
+    transition: .2s;
+}
+
+header a:hover{
+    color: var(--accent-color);
+    transform: scale(1.05);
+}
+
+header nav ul{
+    list-style-type: none;
+}
+
+header nav ul li{
+    display: inline-block;
+    padding: 0 40px;
+}
+
+/* BOTÃO DE TEMA */
+.theme-toggle {
+    background-color: var(--accent-color);
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: #000;
+    transition: 0.3s ease;
+    box-shadow: 0 0 8px var(--white-light);
+}
+
+.theme-toggle:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 12px var(--accent-hover);
+}
+
+/* ESTILO DO TOPO DO SITE */
+section.topo-do-site{
+    padding: 40px 4%;  
+}
+
+section.topo-do-site .flex{
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+}
+
+.topo-do-site h1{
+    color: var(--text-primary);
+    font-size: 40px;
+    line-height: 40px;
+}
+
+.topo-do-site .txt-topo-site p{
+    color: var(--text-primary);
+    margin: 40px 0;
+}
+
+.topo-do-site .img-topo-site img{
+    position: relative;
+    animation: flutuar 2s ease-in-out infinite alternate;
+}
+
+@keyframes flutuar{
+    0%{
+        top: 0;
+    }
+    100%{
+        top: 30px;
+    }
+}
+
+/* ESTILO DAS ESPECIALIDADES */
+section.especialidades{
+    padding: 40px 4%;
+}
+
+section.especialidades .flex{
+    gap: 60px;
+}
+
+.especialidades .especialidades-box{
+    color: var(--text-primary);
+    padding: 40px;
+    border-radius: 20px;
+    margin-top: 45px;
+    transition: .2s;
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--white-light);
+}
+
+.especialidades .especialidades-box:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 8px var(--primary-blue);
+}
+
+.especialidades .especialidades-box i{
+    font-size: 70px;
+    color: var(--primary-blue);
+}
+
+.especialidades .especialidades-box h3{
+    font-size: 28px;
+    margin: 15px 0;
+} 
+
+/* ESTILO DO SOBRE */
+section.sobre{
+    padding: 40px 4%;
+}
+
+section.sobre .flex{
+    align-items: center;
+    gap: 60px;
+}
+
+.sobre .txt-sobre{
+    color: var(--text-primary);
+}
+
+.sobre .txt-sobre h2{
+    font-size: 40px;
+    line-height: 40px;
+    margin-bottom: 30px;
+}
+
+.sobre .txt-sobre h2 span{
+    color: var(--accent-color);
+    display: block;
+}
+
+.sobre .txt-sobre h2 span1{
+    color: var(--text-secondary);
+    display: block;
+}
+
+.sobre .txt-sobre p{
+    margin: 20px 0;
+    text-align: justify;
+}
+
+.btn-social button{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--primary-blue);
+    font-size: 22px;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: .2s;
+    color: #fff;
+}
+
+.img-sobre img{
+    border-radius: 40px;
+}
+
+/* ESTILO DO PORTFOLIO */
+section.portfolio{
+    padding: 80px 4%;
+    box-shadow: 0 0 40px 10px var(--white-light);
+}
+
+section.portfolio .flex{
+    justify-content: space-around;
+    margin-top: 60px;
+}
+
+.img-port{
+    width: 360px;
+    height: 460px;
+    background-size: cover;
+    background-position: 100% 0%;
+    transition: 8s;
+    cursor: pointer;
+    border-radius: 40px;
+    position: relative
+}
+
+.img-port:hover{
+    background-position: 100% 100% ;
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.73);
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 600;
+    color: #fff;
+    opacity: 0;
+    transition: .5s;
+}
+
+.overlay:hover{
+    opacity: 1;
+}
+
+/* ESTILO DO FORMULÁRIO */
+
+section.formulario{
+    padding: 80px 4%;     
+}
+
+/* Contatos ação (botões de e-mail e WhatsApp) */
+.contatos-acao {
+    max-width: 600px;
+    margin: 32px auto 0 auto;
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-mailto button,
+.btn-whatsapp button {
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: 700;
+    border: 0;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: .2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-mailto button {
+    background-color: var(--primary-blue);
+    color: #fff;
+}
+
+.btn-mailto button:hover {
+    box-shadow: 0 0 8px var(--primary-blue);
+    transform: scale(1.05);
+}
+
+.btn-whatsapp button {
+    background-color: #25D366; /* cor oficial WhatsApp */
+    color: #052b11;
+}
+
+.btn-whatsapp button:hover {
+    box-shadow: 0 0 8px #25D366;
+    transform: scale(1.05);
+}
+
+/*Contatos ação (container da textarea) */ 
+.contatos-acao { 
+    width: 100%; max-width: 720px; /* centraliza e limita a largura */ 
+    margin: 24px auto 0 auto; /* centralizado*/
+    display: flex; 
+    flex-wrap: wrap;    
+    align-items: center; 
+    justify-content: center; 
+    gap: 16px; 
+}
+
+/* Textarea de mensagem */ 
+#messageBox { 
+    width: 100%; 
+    min-height: 160px; /* altura agradável */ 
+    background-color: var(--bg-secondary); 
+    border: 1px solid var(--white-light); 
+    color: var(--text-primary); 
+    padding: 16px 14px; 
+    border-radius: 12px; 
+    resize: vertical; /* permite redimensionar verticalmente */ 
+    line-height: 1.4; 
+    font-size: 16px; 
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.3s ease, color 0.3s ease; 
+}
+
+#messageBox::placeholder {
+     color: #aaaaaa; }
+
+#messageBox:focus { 
+    border-color: var(--primary-blue); 
+    box-shadow: 0 0 0 3px rgba(4, 97, 187, 0.25); 
+    outline: none; 
+}
+
+/* Mantém compatibilidade com o formulário antigo (se voltar a usar) */
+form{
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 40px;
+}
+
+form input, form textarea{
+    width: 100%;
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--white-light);
+    outline: 0;
+    padding: 20px 15px;
+    border-radius: 15px;
+    color: var(--text-primary);
+    font-size: 18px;
+    transition: 0.3s ease;
+}
+
+form textarea{
+    resize: none;
+    max-height: 200px;
+}
+
+form .btn-enviar{
+    margin-top: 20px;
+    text-align: center;
+}
+
+form .btn-enviar input{
+    width: 120px;
+    background-color: var(--primary-blue);
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .2s;
+}
+
+form .btn-enviar input:hover{
+    box-shadow: 0px 0px 8px var(--primary-blue);
+    transform: scale(1.05);
+}
+
+/* ESTILO DO RODAPE */
+
+footer{
+    padding: 60px 4%;
+    box-shadow: 0 0 40px 10px var(--white-light);
+    border-top: 2px solid var(--white-light);
+}
+
+footer .flex{
+    justify-content: space-between;
+}
+
+footer .line-footer{
+    padding: 20px 0;
+}
+
+.borda{
+    border-top: 2px solid var(--accent-color);
+}
+
+footer .line-footer p i{
+    color: var(--primary-blue);
+    font-size: 22px;
+}
+
+footer .line-footer p a{
+    color: var(--text-primary);
+}
+
+.logo-footer img {
+    transition: transform 0.3s ease;
+}
+
+.logo-footer img:hover {
+    transform: scale(1.1);
+}
+
+
+
