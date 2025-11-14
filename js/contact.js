@@ -30,10 +30,6 @@ document.addEventListener('DOMContentLoaded', () => {
     return `https://mail.google.com/mail/?view=cm&to=${enc(EMAIL_TO)}&su=${enc(SUBJECT)}&body=${enc(body)}`;
   }
 
-  function buildOutlook() {
-    const body = getMessage();
-    return `https://outlook.live.com/owa/?path=/mail/action/compose&to=${enc(EMAIL_TO)}&subject=${enc(SUBJECT)}&body=${enc(body)}`;
-  }
 
   function buildWhats() {
     const text = getMessage();
