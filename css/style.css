@@ -1,8 +1,6 @@
 /* ============================================================
    VARIÁVEIS CSS / DESIGN TOKENS
    ============================================================ */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap');
-
 :root {
   --bg-primary:     #080d1a;
   --bg-secondary:   #0d1526;
@@ -1483,16 +1481,26 @@ footer .line-footer { width: 100%; }
 /* ============================================================
    ANIMAÇÕES DE ENTRADA
    ============================================================ */
+@keyframes fade-in-fallback {
+  to { opacity: 1; transform: none; }
+}
+
 .fade-in {
   opacity: 0;
   transform: translateY(24px);
   transition: opacity 0.65s ease, transform 0.65s ease;
+  /* Fallback: se o JS não disparar em 2s, revela o elemento via CSS */
+  animation: fade-in-fallback 0.65s ease 2s both;
 }
 
 .fade-in.from-left { transform: translateX(-24px); }
 .fade-in.from-right { transform: translateX(24px); }
 
-.fade-in.visible { opacity: 1; transform: translate(0); }
+.fade-in.visible {
+  opacity: 1;
+  transform: translate(0);
+  animation: none; /* JS aplicou a classe — cancela o fallback */
+}
 
 .fade-in:nth-child(2) { transition-delay: 0.1s; }
 .fade-in:nth-child(3) { transition-delay: 0.2s; }

@@ -53,6 +53,16 @@
   });
 
   // ── Scroll animations (IntersectionObserver) ──────────────
+  const fadeEls = document.querySelectorAll('.fade-in');
+
+  // Reveal elements already visible in the viewport immediately (no observer delay)
+  fadeEls.forEach(el => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 40) {
+      el.classList.add('visible');
+    }
+  });
+
   if ('IntersectionObserver' in window) {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -66,9 +76,14 @@
       { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
     );
 
-    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    // Only observe elements below the fold
+    fadeEls.forEach(el => {
+      if (!el.classList.contains('visible')) {
+        observer.observe(el);
+      }
+    });
   } else {
-    document.querySelectorAll('.fade-in').forEach(el => el.classList.add('visible'));
+    fadeEls.forEach(el => el.classList.add('visible'));
   }
 
   // ── Typing animation (hero page only) ────────────────────
