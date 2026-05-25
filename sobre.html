@@ -3,71 +3,251 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <meta name="description" content="Sobre Lucas Matheus Laitart — Analista de TI, trajetória, habilidades e formação.">
+  <meta name="theme-color" content="#080d1a">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="css/style.css">
-  <title>Sobre - Portfólio</title>
+  <title>Sobre — Lucas Laitart</title>
 </head>
 <body>
+  <a href="#main" class="skip-link">Ir para o conteúdo principal</a>
+
   <header>
     <div class="interface">
       <div class="logo">
-        <a href="index.html"><img src="img/logo.png" alt="Logo"></a>
+        <a href="index.html">
+          <div class="logo-mark">LL</div>
+          Lucas Laitart
+        </a>
       </div>
-      <nav class="menu-desktop">
+      <nav class="menu-desktop" aria-label="Navegação principal">
         <ul>
           <li><a href="index.html">Início</a></li>
-          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="sobre.html" aria-current="page">Sobre</a></li>
           <li><a href="experiencia.html">Experiência</a></li>
           <li><a href="contato.html">Contato</a></li>
         </ul>
       </nav>
-      <button class="theme-toggle" id="themeToggle" title="Alternar tema">
-        <i class="bi bi-moon-fill"></i>
-      </button>
+      <div class="header-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+        <button class="menu-toggle" id="menuToggle"
+          aria-label="Abrir menu" aria-expanded="false" aria-controls="menuMobile">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
   </header>
-  <main>
+
+  <nav class="menu-mobile" id="menuMobile" aria-label="Navegação mobile" aria-hidden="true">
+    <ul>
+      <li><a href="index.html">Início</a></li>
+      <li><a href="sobre.html" aria-current="page">Sobre</a></li>
+      <li><a href="experiencia.html">Experiência</a></li>
+      <li><a href="contato.html">Contato</a></li>
+    </ul>
+  </nav>
+
+  <main id="main">
     <section class="sobre">
-        <div class="interface">
-          <div class="flex">
-            <div class="img-sobre">
-              <img src="img/foto 1.jpg" alt="minha foto">
+      <div class="interface">
+
+        <div class="sobre-header fade-in">
+          <div class="section-label">Quem sou eu</div>
+          <h1>Sobre <span>Mim</span></h1>
+          <p>Estudante de Ciência da Computação com paixão por tecnologia, automação e resolução de problemas.</p>
+        </div>
+
+        <div class="sobre-grid">
+
+          <!-- Coluna esquerda: foto + info -->
+          <div class="sobre-photo-col fade-in from-left">
+            <div class="sobre-avatar-wrap">
+              <div class="sobre-avatar">
+                <span class="sobre-avatar-initials">LL</span>
+              </div>
+              <div class="sobre-accent-ring"></div>
             </div>
-            <div class="txt-sobre">
-              <h2>MUITO PRAZER, <span>ME CHAMO LUCAS MATHEUS.</span></h2>
 
-<p>Sou estudante de Ciência da Computação e atualmente atuo na EL Sistemas como Analista de Tecnologia, trabalhando com suporte técnico N1 e N2, análise de banco de dados e apoio ao time de desenvolvimento. No dia a dia, realizo diagnóstico de incidentes, execução de consultas SQL, registro e acompanhamento de chamados e suporte a sistemas ERP utilizados por clientes corporativos.</p>
-
-<p>Essa experiência tem ampliado minha visão sobre tecnologia aplicada a negócios, fortalecendo minha capacidade de resolver problemas de forma estruturada, comunicar soluções com clareza e atuar com organização em ambientes corporativos.</p>
-
-<p>Sou movido por desafios e aprendizado contínuo. Acredito no impacto que a tecnologia gera nas empresas e busco evoluir constantemente, aprimorando minhas habilidades técnicas e construindo uma trajetória sólida na área de TI.</p>
-              <div class="btn-social">
-                <a href="https://www.instagram.com/laitartlucas/"><button><i class="bi bi-instagram"></i></button></a>
-                <a href="https://github.com/laitartlucas"><button><i class="bi bi-github"></i></button></a>
-                <a href="https://www.linkedin.com/in/lucas-laitart-42503b210/"><button><i class="bi bi-linkedin"></i></button></a>
+            <div class="sobre-info-cards">
+              <div class="info-card">
+                <i class="fa-solid fa-user"></i>
+                <span>Lucas Matheus Laitart</span>
+              </div>
+              <div class="info-card">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>Ronda Alta – RS, Brasil</span>
+              </div>
+              <div class="info-card">
+                <i class="fa-solid fa-envelope"></i>
+                <a href="mailto:laitartlucas@gmail.com">laitartlucas@gmail.com</a>
+              </div>
+              <div class="info-card">
+                <i class="fa-brands fa-linkedin"></i>
+                <a href="https://www.linkedin.com/in/lucas-matheus-laitart-42503b210" target="_blank" rel="noopener noreferrer">linkedin.com/in/lucas-matheus-laitart</a>
+              </div>
+              <div class="info-card">
+                <i class="fa-brands fa-github"></i>
+                <a href="https://github.com/laitartlucas" target="_blank" rel="noopener noreferrer">github.com/laitartlucas</a>
+              </div>
+              <div class="info-card">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <span>Ciência da Computação — FIAP</span>
               </div>
             </div>
           </div>
+
+          <!-- Coluna direita: bio + skills -->
+          <div class="sobre-text-col">
+
+            <div class="sobre-bio fade-in">
+              <div class="section-label">Resumo profissional</div>
+              <h2>Muito prazer, <span>me chamo Lucas.</span></h2>
+              <p>Sou estudante de Ciência da Computação com mais de 2 anos de experiência em TI. Atuo com suporte técnico N1 e N2, administração de Windows Server, análise de dados, execução de consultas SQL e desenvolvimento de automações com Python e JavaScript.</p>
+              <p>Na EL Sistemas, trabalho com diagnóstico de incidentes, auditoria de banco de dados (MySQL, IBExpert), criação de dashboards com dados de ERP, suporte a processos fiscais (NF-e, TEF, LMC) e administração de servidores Windows.</p>
+              <p>Sou autor de projetos no GitHub envolvendo integração de APIs, web scraping, automação de processos e uso de Inteligência Artificial — sempre buscando unir tecnologia com resultado prático para os negócios.</p>
+            </div>
+
+            <!-- Habilidades técnicas -->
+            <div class="skills-section fade-in">
+              <div class="section-label">Habilidades</div>
+              <h3>Habilidades Técnicas</h3>
+
+              <div class="skills-grid">
+                <div class="skill-category">
+                  <div class="skill-category-label">Linguagens & Scripts</div>
+                  <div class="skill-badges stagger-children">
+                    <span class="skill-badge"><i class="fa-brands fa-python"></i> Python</span>
+                    <span class="skill-badge"><i class="fa-brands fa-js"></i> JavaScript</span>
+                    <span class="skill-badge"><i class="fa-solid fa-terminal"></i> PowerShell</span>
+                    <span class="skill-badge"><i class="fa-solid fa-code"></i> HTML</span>
+                    <span class="skill-badge"><i class="fa-brands fa-css3-alt"></i> CSS</span>
+                  </div>
+                </div>
+
+                <div class="skill-category">
+                  <div class="skill-category-label">Banco de Dados & Análise</div>
+                  <div class="skill-badges stagger-children">
+                    <span class="skill-badge"><i class="fa-solid fa-database"></i> SQL</span>
+                    <span class="skill-badge"><i class="fa-solid fa-database"></i> MySQL</span>
+                    <span class="skill-badge"><i class="fa-solid fa-server"></i> IBExpert</span>
+                    <span class="skill-badge"><i class="fa-solid fa-chart-bar"></i> Power BI</span>
+                    <span class="skill-badge"><i class="fa-solid fa-file-excel"></i> Excel</span>
+                  </div>
+                </div>
+
+                <div class="skill-category">
+                  <div class="skill-category-label">Automação & APIs</div>
+                  <div class="skill-badges stagger-children">
+                    <span class="skill-badge"><i class="fa-solid fa-robot"></i> Playwright</span>
+                    <span class="skill-badge"><i class="fa-solid fa-spider"></i> Puppeteer</span>
+                    <span class="skill-badge"><i class="fa-solid fa-globe"></i> Web Scraping</span>
+                    <span class="skill-badge"><i class="fa-solid fa-plug"></i> APIs REST</span>
+                    <span class="skill-badge"><i class="fa-brands fa-chrome"></i> Chrome Extensions</span>
+                    <span class="skill-badge"><i class="fa-solid fa-brain"></i> Claude AI</span>
+                  </div>
+                </div>
+
+                <div class="skill-category">
+                  <div class="skill-category-label">Infraestrutura & Sistemas</div>
+                  <div class="skill-badges stagger-children">
+                    <span class="skill-badge"><i class="fa-brands fa-windows"></i> Windows Server</span>
+                    <span class="skill-badge"><i class="fa-solid fa-network-wired"></i> TCP/IP & DNS</span>
+                    <span class="skill-badge"><i class="fa-brands fa-git-alt"></i> Git</span>
+                    <span class="skill-badge"><i class="fa-solid fa-boxes-stacked"></i> Sistemas ERP</span>
+                    <span class="skill-badge"><i class="fa-solid fa-file-invoice"></i> NF-e / TEF</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Soft skills -->
+            <div class="skills-section fade-in">
+              <h3>Competências Comportamentais</h3>
+              <div class="soft-skills">
+                <span class="soft-badge">Análise e diagnóstico</span>
+                <span class="soft-badge">Documentação técnica</span>
+                <span class="soft-badge">Comunicação clara</span>
+                <span class="soft-badge">Pensamento lógico</span>
+                <span class="soft-badge">Autonomia</span>
+                <span class="soft-badge">Trabalho em equipe</span>
+                <span class="soft-badge">Foco em resultados</span>
+                <span class="soft-badge">Aprendizado rápido</span>
+                <span class="soft-badge">Proatividade</span>
+                <span class="soft-badge">Gestão de demandas</span>
+                <span class="soft-badge">Adaptabilidade</span>
+              </div>
+            </div>
+
+            <!-- Formação -->
+            <div class="edu-section fade-in">
+              <div class="section-label">Formação</div>
+              <h3>Educação</h3>
+              <div class="edu-cards">
+                <div class="edu-card">
+                  <div class="edu-card-top">
+                    <h4>Ciência da Computação</h4>
+                    <span class="edu-card-year">Em andamento</span>
+                  </div>
+                  <p>FIAP — Faculdade de Informática e Administração Paulista</p>
+                </div>
+                <div class="edu-card">
+                  <div class="edu-card-top">
+                    <h4>Ciência da Computação</h4>
+                    <span class="edu-card-year">2025</span>
+                  </div>
+                  <p>UPF — Universidade de Passo Fundo (1 ano cursado)</p>
+                </div>
+                <div class="edu-card">
+                  <div class="edu-card-top">
+                    <h4>Inglês Avançado</h4>
+                    <span class="edu-card-year">2023</span>
+                  </div>
+                  <p>FISK — Certificação MET (Michigan English Test)</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
         </div>
-      </section>
+      </div>
+    </section>
   </main>
+
   <footer>
     <div class="interface">
       <div class="line-footer">
         <div class="flex">
-          <div class="logo-footer">
-            <a href="index.html"><img src="img/logo.png" alt="logo"></a>
-          </div>
+          <a href="index.html" class="footer-brand">
+            <div class="footer-mark">LL</div>
+            Lucas Laitart
+          </a>
+          <p class="footer-copy">© 2025 Lucas Matheus Laitart</p>
           <div class="btn-social">
-            <a href="https://www.instagram.com/laitartlucas/"><button><i class="bi bi-instagram"></i></button></a>
-            <a href="https://github.com/laitartlucas"><button><i class="bi bi-github"></i></button></a>
-            <a href="https://www.linkedin.com/in/lucas-laitart-42503b210/"><button><i class="bi bi-linkedin"></i></button></a>
+            <a href="https://github.com/laitartlucas" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+              <button><i class="fa-brands fa-github"></i></button>
+            </a>
+            <a href="https://www.linkedin.com/in/lucas-matheus-laitart-42503b210" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <button><i class="fa-brands fa-linkedin"></i></button>
+            </a>
+            <a href="mailto:laitartlucas@gmail.com" aria-label="E-mail">
+              <button><i class="fa-solid fa-envelope"></i></button>
+            </a>
           </div>
         </div>
       </div>
     </div>
   </footer>
+
+  <button id="backToTop" aria-label="Voltar ao topo">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
   <script src="js/theme.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>

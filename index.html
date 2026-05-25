@@ -3,65 +3,169 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <meta name="description" content="Portfólio de Lucas Matheus Laitart — Analista de TI, Suporte N1/N2, Python, SQL e Automação.">
+  <meta name="theme-color" content="#080d1a">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="css/style.css">
-  <title>Início - Portfólio</title>
+  <title>Lucas Laitart — Analista de TI</title>
 </head>
 <body>
+  <a href="#main" class="skip-link">Ir para o conteúdo principal</a>
+
   <header>
     <div class="interface">
       <div class="logo">
-        <a href="index.html"><img src="img/logo.png" alt="Logo"></a>
+        <a href="index.html">
+          <div class="logo-mark">LL</div>
+          Lucas Laitart
+        </a>
       </div>
-      <nav class="menu-desktop">
+      <nav class="menu-desktop" aria-label="Navegação principal">
         <ul>
-          <li><a href="index.html">Início</a></li>
+          <li><a href="index.html" aria-current="page">Início</a></li>
           <li><a href="sobre.html">Sobre</a></li>
           <li><a href="experiencia.html">Experiência</a></li>
           <li><a href="contato.html">Contato</a></li>
         </ul>
       </nav>
-      <button class="theme-toggle" id="themeToggle" title="Alternar tema">
-        <i class="bi bi-moon-fill"></i>
-      </button>
+      <div class="header-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+        <button class="menu-toggle" id="menuToggle"
+          aria-label="Abrir menu" aria-expanded="false" aria-controls="menuMobile">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
   </header>
-  <main>
-    <section class="topo-do-site">
+
+  <nav class="menu-mobile" id="menuMobile" aria-label="Navegação mobile" aria-hidden="true">
+    <ul>
+      <li><a href="index.html" aria-current="page">Início</a></li>
+      <li><a href="sobre.html">Sobre</a></li>
+      <li><a href="experiencia.html">Experiência</a></li>
+      <li><a href="contato.html">Contato</a></li>
+    </ul>
+  </nav>
+
+  <main id="main">
+    <section class="hero">
+      <div class="hero-bg"></div>
+      <div class="hero-grid"></div>
+
       <div class="interface">
-        <div class="flex">
-          <div class="txt-topo-site">
-            <h1>APRENDENDO, EVOLUINDO E CONSTRUINDO UM FUTURO.</h1>
-            <p>Acredito que cada desafio é uma oportunidade de crescer. Sou apaixonado por tecnologia e estou construindo uma jornada baseada em propósito, evolução e dedicação.</p>
-            <div class="btn-contato">
-              <a href="sobre.html"><button>Saiba mais</button></a>
+        <div class="hero-content">
+
+          <div class="hero-text fade-in">
+            <div class="hero-badge">
+              <span></span>
+              Disponível para novas oportunidades
+            </div>
+
+            <h1>
+              Olá, sou<br>
+              <span class="name-gradient">Lucas Laitart</span>
+            </h1>
+
+            <div class="hero-typed-wrapper">
+              <span class="hero-typed-prefix">Especialista em </span><span id="typed-text"></span><span class="typed-cursor">|</span>
+            </div>
+
+            <p>Analista de TI com +2 anos de experiência em suporte técnico, administração de Windows Server, análise de dados com SQL e desenvolvimento de automações com Python e JavaScript.</p>
+
+            <div class="hero-location">
+              <i class="fa-solid fa-location-dot"></i>
+              Ronda Alta – RS, Brasil
+            </div>
+
+            <div class="hero-cta">
+              <a href="https://www.linkedin.com/in/lucas-matheus-laitart-42503b210" target="_blank" rel="noopener noreferrer">
+                <button class="btn-primary">
+                  <i class="fa-brands fa-linkedin"></i> LinkedIn
+                </button>
+              </a>
+              <a href="https://github.com/laitartlucas" target="_blank" rel="noopener noreferrer">
+                <button class="btn-outline">
+                  <i class="fa-brands fa-github"></i> GitHub
+                </button>
+              </a>
+              <a href="contato.html">
+                <button class="btn-outline">
+                  <i class="fa-solid fa-envelope"></i> Contato
+                </button>
+              </a>
+            </div>
+
+            <div class="hero-stats">
+              <div class="stat-item">
+                <div class="stat-number">2<span>+</span></div>
+                <div class="stat-label">Anos de experiência</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-number">3<span>+</span></div>
+                <div class="stat-label">Projetos no GitHub</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-number">10<span>+</span></div>
+                <div class="stat-label">Tecnologias</div>
+              </div>
             </div>
           </div>
-          <div class="img-topo-site">
-            <img src="img/foto pagina inicial.png" alt="">
+
+          <div class="hero-visual fade-in">
+            <div class="hero-avatar-wrap">
+              <div class="hero-avatar-ring"></div>
+              <div class="hero-avatar">
+                <span class="hero-avatar-initials">LL</span>
+              </div>
+              <div class="hero-floating-badge">
+                <i class="fa-solid fa-code"></i> Python & JS
+              </div>
+              <div class="hero-floating-badge">
+                <i class="fa-solid fa-database"></i> SQL & ERP
+              </div>
+            </div>
           </div>
+
         </div>
       </div>
     </section>
   </main>
+
   <footer>
     <div class="interface">
       <div class="line-footer">
         <div class="flex">
-          <div class="logo-footer">
-            <a href="index.html"><img src="img/logo.png" alt="logo"></a>
-          </div>
+          <a href="index.html" class="footer-brand">
+            <div class="footer-mark">LL</div>
+            Lucas Laitart
+          </a>
+          <p class="footer-copy">© 2025 Lucas Matheus Laitart</p>
           <div class="btn-social">
-            <a href="https://www.instagram.com/laitartlucas/"><button><i class="bi bi-instagram"></i></button></a>
-            <a href="https://github.com/laitartlucas"><button><i class="bi bi-github"></i></button></a>
-            <a href="https://www.linkedin.com/in/lucas-laitart-42503b210/"><button><i class="bi bi-linkedin"></i></button></a>
+            <a href="https://github.com/laitartlucas" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+              <button><i class="fa-brands fa-github"></i></button>
+            </a>
+            <a href="https://www.linkedin.com/in/lucas-matheus-laitart-42503b210" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <button><i class="fa-brands fa-linkedin"></i></button>
+            </a>
+            <a href="mailto:laitartlucas@gmail.com" aria-label="E-mail">
+              <button><i class="fa-solid fa-envelope"></i></button>
+            </a>
           </div>
         </div>
       </div>
     </div>
   </footer>
+
+  <button id="backToTop" aria-label="Voltar ao topo">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
   <script src="js/theme.js"></script>
-  <script src="js/contact.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>

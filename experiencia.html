@@ -3,60 +3,229 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <meta name="description" content="Experiência profissional e projetos de Lucas Matheus Laitart — Analista de TI.">
+  <meta name="theme-color" content="#080d1a">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="css/style.css">
-  <title>Início - Portfólio</title>
+  <title>Experiência — Lucas Laitart</title>
 </head>
 <body>
+  <a href="#main" class="skip-link">Ir para o conteúdo principal</a>
+
   <header>
     <div class="interface">
       <div class="logo">
-        <a href="index.html"><img src="img/logo.png" alt="Logo"></a>
+        <a href="index.html">
+          <div class="logo-mark">LL</div>
+          Lucas Laitart
+        </a>
       </div>
-      <nav class="menu-desktop">
+      <nav class="menu-desktop" aria-label="Navegação principal">
         <ul>
           <li><a href="index.html">Início</a></li>
           <li><a href="sobre.html">Sobre</a></li>
-          <li><a href="experiencia.html">Experiência</a></li>
+          <li><a href="experiencia.html" aria-current="page">Experiência</a></li>
           <li><a href="contato.html">Contato</a></li>
         </ul>
       </nav>
-      <button class="theme-toggle" id="themeToggle" title="Alternar tema">
-        <i class="bi bi-moon-fill"></i>
-      </button>
+      <div class="header-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+        <button class="menu-toggle" id="menuToggle"
+          aria-label="Abrir menu" aria-expanded="false" aria-controls="menuMobile">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
   </header>
-  <main>
-    <section class="portfolio">
-        <div class="interface">
-          <h2 class="titulo">MINHAS <span>EXPERIÊNCIAS.</span></h2>
-          <div class="flex">
-            <a href="docs/Currículo.pdf" download>
-              <div class="img-port" style="background-image: url(img/curriculo.png);">
-                <div class="overlay">Currículo</div>
-              </div>
-            </a>
-                    </div>
+
+  <nav class="menu-mobile" id="menuMobile" aria-label="Navegação mobile" aria-hidden="true">
+    <ul>
+      <li><a href="index.html">Início</a></li>
+      <li><a href="sobre.html">Sobre</a></li>
+      <li><a href="experiencia.html" aria-current="page">Experiência</a></li>
+      <li><a href="contato.html">Contato</a></li>
+    </ul>
+  </nav>
+
+  <main id="main">
+    <section class="experiencia">
+      <div class="interface">
+
+        <div class="experiencia-header fade-in">
+          <div class="section-label">Trajetória</div>
+          <h1>Experiência <span>Profissional</span></h1>
+          <p>Mais de 2 anos construindo soluções em TI — do suporte técnico à automação de processos.</p>
         </div>
-      </section>
+
+        <!-- Timeline -->
+        <div class="timeline">
+
+          <div class="timeline-item fade-in">
+            <div class="timeline-dot">
+              <i class="fa-solid fa-briefcase"></i>
+            </div>
+            <div class="timeline-card">
+              <div class="timeline-meta">
+                <span class="timeline-period">
+                  <i class="fa-regular fa-calendar"></i> 2024 – Atual
+                </span>
+                <span class="timeline-company">Ronda Alta – RS</span>
+              </div>
+              <h3>EL Sistemas</h3>
+              <div class="role">Analista de Tecnologia / Suporte a Sistemas</div>
+              <ul class="timeline-list">
+                <li>Execução de consultas SQL para auditoria, análise e correção de inconsistências em banco de dados (MySQL, IBExpert)</li>
+                <li>Criação de scripts em Python e JavaScript para automação de rotinas internas</li>
+                <li>Desenvolvimento de dashboards e relatórios com dados de sistemas ERP</li>
+                <li>Identificação, análise e documentação de incidentes, gerando insights para o time de desenvolvimento</li>
+                <li>Suporte técnico N1 e N2 a usuários de sistemas corporativos (remoto e presencial)</li>
+                <li>Implantação, configuração e manutenção de sistemas ERP</li>
+                <li>Validação e suporte em processos fiscais (NF-e, TEF, LMC, certificados digitais)</li>
+                <li>Administração de Windows Server: usuários, permissões, serviços e rede</li>
+              </ul>
+              <div class="timeline-tags">
+                <span class="timeline-tag">SQL</span>
+                <span class="timeline-tag">MySQL</span>
+                <span class="timeline-tag">Python</span>
+                <span class="timeline-tag">JavaScript</span>
+                <span class="timeline-tag">Windows Server</span>
+                <span class="timeline-tag">ERP</span>
+                <span class="timeline-tag">NF-e</span>
+                <span class="timeline-tag">Suporte N1/N2</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item fade-in">
+            <div class="timeline-dot">
+              <i class="fa-solid fa-building"></i>
+            </div>
+            <div class="timeline-card">
+              <div class="timeline-meta">
+                <span class="timeline-period">
+                  <i class="fa-regular fa-calendar"></i> 2023 – 2024
+                </span>
+                <span class="timeline-company">Ronda Alta – RS</span>
+              </div>
+              <h3>Escritório Contábil Precisão</h3>
+              <div class="role">Auxiliar Administrativo</div>
+              <ul class="timeline-list">
+                <li>Organização, tratamento e análise de dados e documentos fiscais</li>
+                <li>Automação e melhoria de processos internos de escritório</li>
+                <li>Emissão de notas fiscais e suporte a sistemas contábeis</li>
+              </ul>
+              <div class="timeline-tags">
+                <span class="timeline-tag">Análise de Dados</span>
+                <span class="timeline-tag">Automação de Processos</span>
+                <span class="timeline-tag">Documentos Fiscais</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Projetos -->
+        <div class="projetos-section">
+          <div class="section-label" style="justify-content: center;">Projetos</div>
+          <h2 class="section-title fade-in">Projetos no <span>GitHub</span></h2>
+          <p class="section-subtitle fade-in">Automações, integrações de API e ferramentas desenvolvidas por iniciativa própria.</p>
+
+          <div class="projetos-grid stagger-children">
+
+            <a href="https://github.com/laitartlucas/Luna-Automation" target="_blank" rel="noopener noreferrer" class="projeto-card fade-in">
+              <div class="projeto-icon">
+                <i class="fa-solid fa-robot"></i>
+              </div>
+              <h3>Luna Automation</h3>
+              <p>Automação completa de pedidos de dropshipping integrando Google Sheets, web scraping com Playwright e WhatsApp. Lê dados de planilhas, valida pedidos via automação de navegador e registra informações automaticamente.</p>
+              <div class="projeto-tags">
+                <span class="projeto-tag">Python</span>
+                <span class="projeto-tag">Node.js</span>
+                <span class="projeto-tag">Playwright</span>
+                <span class="projeto-tag">Google Sheets API</span>
+                <span class="projeto-tag">WhatsApp (Baileys)</span>
+              </div>
+              <span class="projeto-link">
+                Ver no GitHub <i class="fa-solid fa-arrow-right"></i>
+              </span>
+            </a>
+
+            <a href="https://github.com/laitartlucas/Automa-o-de-Afiliados-Mercado-Livre" target="_blank" rel="noopener noreferrer" class="projeto-card fade-in">
+              <div class="projeto-icon">
+                <i class="fa-solid fa-brain"></i>
+              </div>
+              <h3>ML Affiliate Bot</h3>
+              <p>Bot que monitora links de afiliados do Mercado Livre, faz scraping do produto e utiliza a API do Claude AI para gerar descrições otimizadas automaticamente, aumentando a conversão dos anúncios.</p>
+              <div class="projeto-tags">
+                <span class="projeto-tag">Node.js</span>
+                <span class="projeto-tag">Puppeteer</span>
+                <span class="projeto-tag">Claude AI</span>
+                <span class="projeto-tag">Web Scraping</span>
+              </div>
+              <span class="projeto-link">
+                Ver no GitHub <i class="fa-solid fa-arrow-right"></i>
+              </span>
+            </a>
+
+            <a href="https://github.com/laitartlucas/Extension-Shopee" target="_blank" rel="noopener noreferrer" class="projeto-card fade-in">
+              <div class="projeto-icon">
+                <i class="fa-brands fa-chrome"></i>
+              </div>
+              <h3>Extension Shopee</h3>
+              <p>Extensão para Google Chrome (Manifest V3) que preenche automaticamente formulários de endereço na Shopee a partir de parâmetros via URL, agilizando o fluxo de compra para vendedores.</p>
+              <div class="projeto-tags">
+                <span class="projeto-tag">JavaScript</span>
+                <span class="projeto-tag">Chrome Extensions API</span>
+                <span class="projeto-tag">HTML</span>
+                <span class="projeto-tag">CSS</span>
+              </div>
+              <span class="projeto-link">
+                Ver no GitHub <i class="fa-solid fa-arrow-right"></i>
+              </span>
+            </a>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
   </main>
+
   <footer>
     <div class="interface">
       <div class="line-footer">
         <div class="flex">
-          <div class="logo-footer">
-            <a href="index.html"><img src="img/logo.png" alt="logo"></a>
-          </div>
+          <a href="index.html" class="footer-brand">
+            <div class="footer-mark">LL</div>
+            Lucas Laitart
+          </a>
+          <p class="footer-copy">© 2025 Lucas Matheus Laitart</p>
           <div class="btn-social">
-            <a href="https://www.instagram.com/laitartlucas/"><button><i class="bi bi-instagram"></i></button></a>
-            <a href="https://github.com/laitartlucas"><button><i class="bi bi-github"></i></button></a>
-            <a href="https://www.linkedin.com/in/lucas-laitart-42503b210/"><button><i class="bi bi-linkedin"></i></button></a>
+            <a href="https://github.com/laitartlucas" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+              <button><i class="fa-brands fa-github"></i></button>
+            </a>
+            <a href="https://www.linkedin.com/in/lucas-matheus-laitart-42503b210" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <button><i class="fa-brands fa-linkedin"></i></button>
+            </a>
+            <a href="mailto:laitartlucas@gmail.com" aria-label="E-mail">
+              <button><i class="fa-solid fa-envelope"></i></button>
+            </a>
           </div>
         </div>
       </div>
     </div>
   </footer>
+
+  <button id="backToTop" aria-label="Voltar ao topo">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
   <script src="js/theme.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>

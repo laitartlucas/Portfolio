@@ -1,74 +1,34 @@
-// contact.js — dynamic builders for contact actions (mailto, Gmail, Outlook Web, WhatsApp)
-
 document.addEventListener('DOMContentLoaded', () => {
+  const form       = document.getElementById('contactForm');
+  const btnEnviar  = document.getElementById('btnEnviar');
   const messageBox = document.getElementById('messageBox');
-  const btnMailto = document.getElementById('btnMailto');
-  const btnGmail = document.getElementById('btnGmail');
-  const btnOutlook = document.getElementById('btnOutlook');
-  const btnWhats = document.getElementById('btnWhats');
+  const inputNome  = document.getElementById('inputNome');
+  const inputEmail = document.getElementById('inputEmail');
+  const inputAssunto = document.getElementById('inputAssunto');
 
   const EMAIL_TO = 'laitartlucas@gmail.com';
-  const SUBJECT = 'Contato via Portfólio';
-  const WHATS_NUMBER = '5554999258389'; 
 
-  function getMessage() {
-    const raw = (messageBox?.value || '').trim();
-    return raw || 'Ola, visitei seu site e gostaria de conversar.';
+  function enc(v) { return encodeURIComponent(v); }
+
+  function buildGmailLink() {
+    const nome    = (inputNome?.value || '').trim();
+    const email   = (inputEmail?.value || '').trim();
+    const assunto = (inputAssunto?.value || 'Contato via Portfólio').trim();
+    const msg     = (messageBox?.value || '').trim();
+
+    const subject = assunto || 'Contato via Portfólio';
+    const body = [
+      nome    ? `Nome: ${nome}`    : '',
+      email   ? `E-mail: ${email}` : '',
+      '',
+      msg || 'Olá Lucas, gostaria de conversar.',
+    ].filter(Boolean).join('\n');
+
+    return `https://mail.google.com/mail/?view=cm&to=${enc(EMAIL_TO)}&su=${enc(subject)}&body=${enc(body)}`;
   }
 
-  function enc(v) {
-    return encodeURIComponent(v);
-  }
-
-  function buildMailto() {
-    const body = getMessage();
-    return `mailto:${EMAIL_TO}?subject=${enc(SUBJECT)}&body=${enc(body)}`;
-  }
-
-  function buildGmail() {
-    const body = getMessage();
-    return `https://mail.google.com/mail/?view=cm&to=${enc(EMAIL_TO)}&su=${enc(SUBJECT)}&body=${enc(body)}`;
-  }
-
-
-  function buildWhats() {
-    const text = getMessage();
-    return `https://wa.me/${WHATS_NUMBER}?text=${enc(text)}`;
-  }
-
-  function safeAssign(anchor, href) {
-    if (!anchor) return;
-    // use setAttribute to avoid immediate navigation
-    anchor.setAttribute('href', href);
-  }
-
-  // Update links on each interaction
-  [messageBox].forEach(el => {
-    if (!el) return;
-    el.addEventListener('input', () => {
-      safeAssign(btnMailto, buildMailto());
-      safeAssign(btnGmail, buildGmail());
-      safeAssign(btnOutlook, buildOutlook());
-      safeAssign(btnWhats, buildWhats());
-    });
+  form?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    window.open(buildGmailLink(), '_blank', 'noopener,noreferrer');
   });
-
-  // Also update on button hover/click to ensure latest value
-  [btnMailto, btnGmail, btnOutlook, btnWhats].forEach(btn => {
-    if (!btn) return;
-    ['mouseenter','click','focus'].forEach(evt => {
-      btn.addEventListener(evt, () => {
-        safeAssign(btnMailto, buildMailto());
-        safeAssign(btnGmail, buildGmail());
-        safeAssign(btnOutlook, buildOutlook());
-        safeAssign(btnWhats, buildWhats());
-      });
-    });
-  });
-
-  // Initial set
-  safeAssign(btnMailto, buildMailto());
-  safeAssign(btnGmail, buildGmail());
-  safeAssign(btnOutlook, buildOutlook());
-  safeAssign(btnWhats, buildWhats());
 });
